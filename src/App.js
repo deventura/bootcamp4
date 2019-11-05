@@ -31,7 +31,7 @@ class App extends React.Component {
   }
 
   addBuilding(data, name, code, longitude, latitude, address){
-    const newData = data.push({id: data.length+1, name: name, code: code, coordinates: {latitude: latitude, longitude: longitude}, address: address });
+    const newData = data.push({id: data[data.length-1].id+1, name: name, code: code, coordinates: {latitude: latitude, longitude: longitude}, address: address });
     this.setState({
         data: newData
     });
