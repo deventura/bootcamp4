@@ -50,7 +50,7 @@ class App extends React.Component {
       <div className="bg">
       <header>
         <div className="row">
-          <center><h1><font size = "7" color = "FF8C00">UF Directory App</font></h1></center>
+          <center><h1><b><font size = "7" color = "#0073ff">UF Directory App</font></b></h1></center>
         </div>
         <Search
           filterText = {this.props.filterText}
@@ -80,19 +80,17 @@ class App extends React.Component {
                 data = {this.props.data}
                 selectedBuilding = {this.state.selectedBuilding}
               />
-            </div>
-            <div className = "addBuildingSection">
               <AddBuilding
                 data = {this.props.data}
                 addBuilding = {this.addBuilding.bind(this)}
               />
-            </div>
-            <div className = "removeBuildingSection">
               <RemoveBuilding
                 data = {this.props.data}
                 buildingtoRemove = {this.state.selectedBuilding}
                 removeBuilding = {this.removeBuilding.bind(this)}
               />
+            </div>
+            <div className = "orangefooter">
             </div>
           </div>
           <Credit />
